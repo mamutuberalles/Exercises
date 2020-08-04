@@ -60,6 +60,17 @@
 		$password = $_POST['password'];
 		$id = $_POST['id'];
 		
+		/* Jelszó titkosítás */
+		$hashFormat = "$2y$10$";
+		$salt = "iusesomecrazystrings22";
+		$hashF_and_salt = $hashFormat . $salt;
+
+		$password = crypt($password, $hashF_and_salt);
+
+		/* MySQL Injectionök ellen jó */
+		mysqli_real_escape_string($connection, $username); 
+		mysqli_real_escape_string($connection, $password);
+		
 		$query = "UPDATE users SET ";
 		$query .= "username = '$username', ";
 		$query .= "password = '$password' ";
