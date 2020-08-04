@@ -1,5 +1,5 @@
 
-<h1>dbkezelo Adatbáziskezelő</h1>
+<h1>Adatbáziskezelő</h1>
 <h2>Mi ez?</h2>
 Ez egy adatbázis kezelő interfész, ami PHP-ban lett írva. 4 oldalt tartalmaz: létrehozás, listázás, törlés, módosítás. Az interfész jelenleg csak egy táblában tud adatot változtatni.
 <h2>Mi kell hozzá?</h2>
